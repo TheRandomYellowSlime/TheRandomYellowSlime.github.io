@@ -2,7 +2,19 @@
 html
 {
     font-family: sans-serif;
-    background-color: aliceblue;
+    background-color: rgb(205, 231, 253);
+    scroll-behavior: smooth;
+}
+a
+{
+    text-decoration: none;
+    color: rgb(110, 200, 238);
+}
+
+body
+{
+    padding: 0;
+    margin: 0;
 }
 header
 {
@@ -13,43 +25,100 @@ header
     height: 100vh;
     padding: 0;
     margin: 0;
-    width: fit-content;
+    width: 280px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 nav
 {
-    padding: 20px 0px;
-    margin: 20px 0px;
+    text-align: center;
+}
+header nav ul
+{
+    padding: 0;
 }
 header nav ul li
 {
     list-style: none;
-    padding: 10px;
+    padding: 12px;
     font-size: 20px;
+    text-transform: uppercase;
     font-weight: bold;
 }
 header nav ul li a:hover
 {
+    color: rgb(159, 234, 251);
+}
+header nav ul li a.highlight
+{
     color: aqua;
 }
-a
+main
 {
-    text-decoration: none;
-    color: rgb(110, 200, 238);
+    margin-left: 250px;
+    
 }
 section
 {
-    height: 720px;
+    height: 100vh;
+    padding-left: 85px;
+    border-bottom: rgb(140, 160, 169) solid 1px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: left;
 }
 section .heading span
 {
+    font-family: 'Secular One', sans-serif;
     font-size: 32px;
+    text-transform: uppercase;
+    font-weight: bold;
+    color:rgb(0, 83, 139);
 }
-section #about a
+section .content
+{
+    max-width: 920px;
+}
+#about .content .item span a
 {
     color: dodgerblue;
+    font-size: 20px;
+    /*text-decoration: underline;*/
 }
 .item
 {
     padding: 10px 0px;
-    padding-left: 15px;
+}
+#name
+{
+    font-family: 'Secular One', sans-serif;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: rgb(47, 47, 47);
+    font-size: 60px;
+    margin-bottom: 10px;
+
+}
+.socials
+{
+    display: flex;
+}
+.link
+{
+    height: 40px;
+    width: 40px;
+    background-color: #117688;
+    border-radius: 50%;
+    margin-right: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.link img
+{
+    max-width: 20px;
+    height: auto;
+    display: block;
 }
