@@ -10,7 +10,6 @@ a
     text-decoration: none;
     color: rgb(110, 200, 238);
 }
-
 body
 {
     padding: 0;
@@ -19,7 +18,7 @@ body
 header
 {
     background-color: dodgerblue;
-    position: sticky;
+    position: fixed; /* better than sticky */
     top: 0;
     left: 0;
     height: 100vh;
@@ -56,13 +55,14 @@ header nav ul li a.highlight
 }
 main
 {
-    margin-left: 250px;
-    
+    margin-left: 280px;
+    position: relative; /* better than absolute */
+    top: 0;
 }
 section
 {
     height: 100vh;
-    padding-left: 85px;
+    padding-left: 60px;
     border-bottom: rgb(140, 160, 169) solid 1px;
     display: flex;
     flex-direction: column;
@@ -80,6 +80,11 @@ section .heading span
 section .content
 {
     max-width: 920px;
+}
+#about .content .item span
+{
+    color: dodgerblue;
+    font-size: 20px;
 }
 #about .content .item span a
 {
@@ -109,12 +114,16 @@ section .content
 {
     height: 40px;
     width: 40px;
-    background-color: #117688;
+    background-color: #385256;
     border-radius: 50%;
     margin-right: 15px;
     display: flex;
     justify-content: center;
     align-items: center;
+}
+.link:hover
+{
+    background-color: #117688;
 }
 .link img
 {
