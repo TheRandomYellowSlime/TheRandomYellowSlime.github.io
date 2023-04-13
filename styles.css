@@ -94,6 +94,10 @@ section .content
     font-size: 20px;
     /*text-decoration: underline;*/
 }
+.item .date
+{
+    color:#117688
+}
 .item
 {
     padding: 10px 0px;
@@ -135,6 +139,54 @@ section .content
 }
 
 /* Phone display */
-@media screen and (max-width = 600px) {
-    
+@media screen and (max-width = 600px) 
+{
+html
+{
+    font-family: sans-serif;
+    background-color: rgb(205, 231, 253);
+    scroll-behavior: smooth;
+}
+a
+{
+    text-decoration: none;
+    color: rgb(110, 200, 238);
+}
+body
+{
+    padding: 0;
+    margin: 0;
+}
+header
+{
+    background-color: dodgerblue;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    padding: 0;
+    margin: 0;
+    width: 160px;
+    min-width: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+main
+{
+    margin-left: 160px;
+    position: relative;
+    top: 0;
+    min-width: 360px;
+}
+section
+{
+    height: 100vh;
+    padding-left: 30px;
+    border-bottom: rgb(140, 160, 169) solid 1px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: left;
+}
 }
