@@ -11,10 +11,8 @@
 
 <body>
     <!--Page header: -->
-        <!--TODO: improve header-->
     <header>
         <!--Navigation menu: -->
-            <!--TODO: improve nav-->
         <nav>
             <ul>
                 <li><a href="#about">About</a></li>
@@ -34,7 +32,8 @@
                 <div class="item">
                     <h2 id="name">Marek Kunz</h2>
                     <span>
-                        (+420) 776 477 990 ・
+                        <a href="tel:+420776477990">(+420) 776 477 990</a>
+                        ・
                         <a href="mailto:xkunzm02@stud.fit.vutbr.cz">xkunzm02@stud.fit.vutbr.cz</a>
                     </span>
                     <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.</p>
@@ -42,12 +41,17 @@
                     <div class="socials">
                         <span class="link">
                             <a href="https://github.com/TheRandomYellowSlime">
-                                <img src="../github_icon.png" alt="github">
+                                <img src="../img/github_icon.png" alt="github">
                             </a>
                         </span>
                         <span class="link">
                             <a href="https://discord.com/">
-                                <img src="../discord_icon.png" alt="discord">
+                                <img src="../img/discord_icon.png" alt="discord">
+                            </a>
+                        </span>
+                        <span class="link">
+                            <a href="https://www.fit.vut.cz/">
+                                <img src="../img/vut_icon.png" alt="vut">
                             </a>
                         </span>
                     </div>
@@ -125,6 +129,12 @@
             </div>
         </section>
     </main>
+    <!--Page footer: -->
+    <footer>
+        <div class="content">
+            <a href="#about"><p>© 2023 Marek Kunz</p></a>
+        </div>
+    </footer>
     <script>
         const sections = document.querySelectorAll('section');
         const navigation = document.querySelectorAll('nav a');
