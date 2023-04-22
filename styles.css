@@ -125,6 +125,7 @@ section .content
     margin-bottom: 10px;
 
 }
+/*== Links to social networks: ==*/
 .socials
 {
     display: flex;
@@ -175,7 +176,7 @@ footer a
     html
     {
         font-family: sans-serif;
-        background-color: rgb(205, 231, 253);
+        background-color: rgb(168, 213, 252);
         scroll-behavior: smooth;
     }
     a
