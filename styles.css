@@ -72,6 +72,7 @@ section
 {
     height: 100vh;
     padding-left: 60px;
+    padding-right: 60px;
     border-top: rgb(39, 185, 253) solid 1px;
     display: flex;
     flex-direction: column;
@@ -215,6 +216,7 @@ footer a
     {
         height: 100vh;
         padding-left: 30px;
+        padding-right: 30px;
         border-top: rgb(39, 185, 253) solid 1px;
         display: flex;
         flex-direction: column;
