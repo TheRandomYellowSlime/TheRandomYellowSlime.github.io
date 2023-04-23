@@ -215,7 +215,7 @@ footer a
     {
         height: 100vh;
         padding-left: 30px;
-        border-bottom: rgb(140, 160, 169) solid 1px;
+        border-top: rgb(39, 185, 253) solid 1px;
         display: flex;
         flex-direction: column;
         justify-content: center;
