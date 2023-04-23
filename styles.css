@@ -2,7 +2,6 @@
 html
 {
     font-family: sans-serif;
-    /*background-color: rgb(205, 231, 253);*/
     background-image: linear-gradient(to left, rgba(0, 174, 255, 0.091), rgb(107, 191, 255));
     scroll-behavior: smooth;
 }
@@ -174,10 +173,12 @@ footer a
 /*===== Adjustments for phone display: =====*/
 @media only screen and (max-width: 600px) 
 {
+    /*===== Default page settings: =====*/
     html
     {
         font-family: sans-serif;
-        background-color: rgb(168, 213, 252);
+        /*background-color: rgb(134, 198, 253);*/
+        background-color: red;
         scroll-behavior: smooth;
     }
     a
@@ -190,6 +191,7 @@ footer a
         padding: 0;
         margin: 0;
     }
+    /*===== Header/sidebar with page navigation: =====*/
     header
     {
         background-color: dodgerblue;
@@ -205,6 +207,7 @@ footer a
         justify-content: center;
         align-items: center;
     }
+    /*===== Main content of the page: =====*/
     main
     {
         margin-left: 160px;
@@ -212,6 +215,7 @@ footer a
         top: 0;
         min-width: 360px;
     }
+    /*=== Universal settings for sections of content: ===*/
     section
     {
         height: 100vh;
