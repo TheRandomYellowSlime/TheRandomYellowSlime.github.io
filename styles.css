@@ -176,6 +176,7 @@ footer a
     html
     {
         font-family: sans-serif;
+        background-color: rgb(134, 198, 253);
         scroll-behavior: smooth;
     }
     a
@@ -187,14 +188,11 @@ footer a
     {
         padding: 0;
         margin: 0;
-        /*background-color: rgb(134, 198, 253);*/
-        background-color: red;
     }
     /*===== Header/sidebar with page navigation: =====*/
     header
     {
-        /*background-color: dodgerblue;*/
-        background-color: red;
+        background-color: dodgerblue;
         position: fixed;
         top: 0;
         left: 0;
