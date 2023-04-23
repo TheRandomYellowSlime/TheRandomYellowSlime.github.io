@@ -90,6 +90,11 @@ section .content
 {
     max-width: 920px;
 }
+.content ul li
+{
+    list-style-type: circle;
+    padding-top: 8px;
+}
 .item
 {
     padding: 10px 0px;
@@ -106,7 +111,7 @@ section .content
 /*=== Section - About: ===*/
 #about .content .item span
 {
-    color: rgb(82, 124, 249);
+    color: rgb(82, 166, 249);
     font-size: 20px;
 }
 #about .content .item span a
