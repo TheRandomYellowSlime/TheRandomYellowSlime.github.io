@@ -20,25 +20,38 @@ window.runScript = function() {  // Attach function to global window object
     })
     .then(response => response.json())
     .then(data => {
-        console.log("Response:", data);
+        console.log("Full Response:", data); // Log full response for debugging
 
-        // Check if response contains the required data
         if (data && data.data) {
-            let avatarUrl = data.data.avatar_image; // Get avatar image URL
-            let nickname = data.data.nickname; // Get nickname
-            
-            // Update the DOM elements
-            document.getElementById("nickname").textContent = nickname;
-            document.getElementById("avatar").src = avatarUrl;
-            document.getElementById("avatar").style.display = "block"; // Show the image
+            let avatarUrl = data.data.avatar_image; 
+            let nickname = data.data.nickname;
+
+            console.log("Avatar URL:", avatarUrl);
+            console.log("Nickname:", nickname);
+
+            if (avatarUrl) {
+                document.getElementById("avatar").src = avatarUrl;
+                document.getElementById("avatar").style.display = "block";
+            } else {
+                console.warn("Avatar URL is missing in response!");
+                document.getElementById("avatar").style.display = "none";
+            }
+
+            if (nickname) {
+                document.getElementById("nickname").textContent = nickname;
+            } else {
+                console.warn("Nickname is missing in response!");
+                document.getElementById("nickname").textContent = "No nickname found";
+            }
         } else {
+            console.error("No 'data' field in response!");
             document.getElementById("nickname").textContent = "User not found!";
-            document.getElementById("avatar").style.display = "none"; // Hide image
+            document.getElementById("avatar").style.display = "none";
         }
     })
     .catch(error => {
-        console.error("Error:", error);
+        console.error("Error fetching data:", error);
         document.getElementById("nickname").textContent = "Error fetching data!";
-        document.getElementById("avatar").style.display = "none"; // Hide image
+        document.getElementById("avatar").style.display = "none";
     });
 };
