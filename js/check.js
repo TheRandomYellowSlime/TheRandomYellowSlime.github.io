@@ -10,6 +10,16 @@ window.onload = function() {
     }
 };
 
+// Add event listener for the login button
+document.addEventListener("DOMContentLoaded", () => {
+    const loginButton = document.getElementById("loginButton");
+    loginButton.addEventListener("click", login);
+
+    // Add event listener for the logout button
+    const logoutButton = document.getElementById("logoutButton");
+    logoutButton.addEventListener("click", logout);
+});
+
 // Login function
 function login() {
     const inputValue = document.getElementById("userInput").value;

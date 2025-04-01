@@ -11,7 +11,7 @@
         <div id="loginForm">
             <h2>Please Enter Your ID:</h2>
             <input type="text" id="userInput" placeholder="Enter ID", maxlength="9", type="number">
-            <button onclick="login()">Login</button>
+            <button id="loginButton">Login</button>
         </div>
 
         <h2 id="nickname"></h2>  <!-- Display nickname -->
@@ -21,7 +21,7 @@
         <div id="restrictedContent" style="display:none;">
             <h3>Welcome to the restricted section!</h3>
             <p>This content is only available to logged-in users.</p>
-            <button onclick="logout()">Logout</button>
+            <button id="logoutButton">Logout</button>
         </div>
 
         <!-- Error Message -->
@@ -29,7 +29,8 @@
 
     </main>
     <!-- Scripts: -->
-    <script src="js/check.js"></script>
     <script src="js/md5.min.js"></script>
+    <script src="js/check.js"></script>
+    
 </body>
 </html>
