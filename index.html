@@ -11,12 +11,25 @@
 </head>
 <body>
     <main>
-        <input type="text" id="userInput" placeholder="Enter something...">
-        <button onclick="runScript()">Run Script</button>
+        <div id="loginForm">
+            <h2>Please Enter Your ID:</h2>
+            <input type="text" id="userInput" placeholder="Enter ID", maxlength="9">
+            <button onclick="login()">Login</button>
+        </div>
 
         <h2 id="nickname"></h2>  <!-- Display nickname -->
         <img id="avatar" style="display:none; width: 150px; height: 150px; border-radius: 50%;" alt="Avatar">
         
+        <!-- Restricted Content (visible only after login) -->
+        <div id="restrictedContent" style="display:none;">
+            <h3>Welcome to the restricted section!</h3>
+            <p>This content is only available to logged-in users.</p>
+            <button onclick="logout()">Logout</button>
+        </div>
+
+        <!-- Error Message -->
+        <div id="errorMessage" style="color:red;"></div>
+
     </main>
     <!-- Scripts: -->
     <script src="js/check.js"></script>
