@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Secular+One&display=swap" rel="stylesheet">
+    <title>ITW - Project 2</title>
+</head>
+
+<body>
+    <!--Page header: -->
+    <header>
+        <!--Navigation menu: -->
+        <nav>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#interests">Interests</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!--Sections of the page: -->
+    <main>
+        <!--Section: About me-->
+        <section id="about">
+            <div class="content">
+                <div class="item">
+                    <h2 id="name">Marek Kunz</h2>
+                    <span>
+                        <a href="tel:+420776477990">(+420) 776 477 990</a>
+                        ・
+                        <a href="mailto:xkunzm02@stud.fit.vutbr.cz">xkunzm02@vutbr.cz</a>
+                    </span>
+                    <p>I am an IT student with an eye for detail and always happy to help. Shall we start?</p>
+                    <!--social media-->
+                    <div class="socials">
+                        <span class="link">
+                            <a href="https://github.com/TheRandomYellowSlime">
+                                <img src="../img/github_icon.png" alt="github">
+                            </a>
+                        </span>
+                        <span class="link">
+                            <a href="https://discord.com/">
+                                <img src="../img/discord_icon.png" alt="discord">
+                            </a>
+                        </span>
+                        <span class="link">
+                            <a href="https://www.fit.vut.cz/">
+                                <img src="../img/vut_icon.png" alt="vut">
+                            </a>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--Section: Experience-->
+        <section id="experience">
+            <div class="heading">
+                <span>Experience</span>
+            </div>
+
+            <div class="content">
+                <div class="item">
+                    <h2>Attendant, usher</h2>
+                    <h3>Golden Apple Cinema</h3>
+                    <span>Attending to need of the guests, making sure the film is running smoothly, everyones tickets are checked and that everyone leaves satisfied.</span>
+                    <p class="date">August 2021 - January 2022</p>
+                </div>
+
+                <div class="item">
+                    <h2>Help Desk Attendant</h2>
+                    <h3>Tourist Information Center</h3>
+                    <span>Helping people with navigating around the city and surrounding region, finding interesting destinations for them to visit a providing them with any addition information within my knowlegde.</span>
+                    <p class="date">July 2019 - August 2019</p>
+                </div>
+
+            </div>
+        </section>
+        <!--Section: Education-->
+        <section id="education">
+            <div class="heading">
+                <span>Education</span>
+            </div>
+
+            <div class="content">
+                <div class="item">
+                    <h2>Brno University of Technology</h2>
+                    <h3>Faculty of Information Technology</h3>
+                    <span>Studying for bachelor's degree in Information Technology.</span>
+                    <p class="date">September 2022 - Present</p>
+                </div>
+
+                <div class="item">
+                    <h2>Technical High School Zlín</h2>
+                    <h3>Technical Lyceum</h3>
+                    <span>Graduated with broad knowledge of engineering topics with specialiation in Information Technology.</span>
+                    <p class="date">September 2018 - June 2022</p>
+                </div>
+
+            </div>
+        </section>
+        <!--Section: Skills-->
+        <section id="skills">
+            <div class="heading">
+                <span>Skills</span>
+            </div>
+
+            <div class="content">
+                <ul>
+                    <li>Proficiency in english: C2</li>
+                    <li>Experience with video editing</li>
+                    <li>Knowledge of programming languages: C, C#, C++, Python, Bash</li>
+                    <li>Detail oriented and a team player</li>
+                </ul>
+            </div>
+        </section>
+        <!--Section: Interests-->
+        <section id="interests">
+            <div class="heading">
+                <span>Interests</span>
+            </div>
+
+            <div class="content">
+                <ul>
+                    <li>I love music. I listen to it whenever I get a chance and also play an electic keyboard for fun.</li>
+                    <li>I am a huge nerd and love all things Sci-fi and Fantasy. My favourites are Doctor Who, Star Trek and LoTR.</li>
+                    <li>For relaxing, apart from music, I find it calming to just go out and spend some time in nature.</li>
+                    <li>For my hobbies I play video games of all different genres alone and with friends.</li>
+                </ul>
+            </div>
+        </section>
+    </main>
+    <!--Page footer: -->
+    <footer>
+        <div class="content">
+            <a href="https://therandomyellowslime.github.io/"><p>© 2023 Marek Kunz</p></a>
+        </div>
+    </footer>
+    <!--Scripts: -->
+    <script>
+        const sections = document.querySelectorAll('section');
+        const navigation = document.querySelectorAll('nav a');
+
+        window.addEventListener('scroll', () => 
+        {
+            let current = '';
+
+            sections.forEach(section => 
+            {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                if (pageYOffset >= sectionTop - sectionHeight / 3)
+                {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            navigation.forEach(link => 
+            {
+            link.classList.remove('highlight');
+            if (link.getAttribute('href').includes(current))
+            {
+                link.classList.add('highlight');
+            }
+            });
+        });
+    </script>
+</body>
+</html>
