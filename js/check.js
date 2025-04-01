@@ -1,4 +1,4 @@
-const REQUIRED_KID = "12345"; // Example constant to check if user has access
+const REQUIRED_KID = "1958"; // Example constant to check if user has access
 
 // Check if the user is already logged in on page load
 window.onload = function() {
