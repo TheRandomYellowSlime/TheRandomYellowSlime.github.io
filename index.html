@@ -14,27 +14,12 @@
         <input type="text" id="userInput" placeholder="Enter something...">
         <button onclick="runScript()">Run Script</button>
 
-        <script src="js/check.js"></script>
+        <h2 id="nickname"></h2>  <!-- Display nickname -->
+        <img id="avatar" style="display:none; width: 150px; height: 150px; border-radius: 50%;" alt="Avatar">
+        
     </main>
     <!-- Scripts: -->
+    <script src="js/check.js"></script>
     <script src="js/md5.min.js"></script>
-    <script>
-
-        const id = 301440151 // this is your character ID
-        const secret = 'tB87#kPtkxqOS2'
-        const time = Date.now()
-
-        let form = `fid=${id}&time=${time}`;
-        let sign = md5(form + secret);
-        form = `sign=${sign}&` + form;
-
-        fetch('https://wos-giftcode-api.centurygame.com/api/player', {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/x-www-form-urlencoded'
-        },
-        body: form
-        }).then(r => r.json()).then(r => console.log(r));
-    </script>
 </body>
 </html>

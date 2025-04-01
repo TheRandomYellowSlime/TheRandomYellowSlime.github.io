@@ -19,6 +19,26 @@ window.runScript = function() {  // Attach function to global window object
         body: form
     })
     .then(response => response.json())
-    .then(data => console.log("Response:", data))
-    .catch(error => console.error("Error:", error));
+    .then(data => {
+        console.log("Response:", data);
+
+        // Check if response contains the required data
+        if (data && data.data) {
+            let avatarUrl = data.data.avatar_image; // Get avatar image URL
+            let nickname = data.data.nickname; // Get nickname
+            
+            // Update the DOM elements
+            document.getElementById("nickname").textContent = nickname;
+            document.getElementById("avatar").src = avatarUrl;
+            document.getElementById("avatar").style.display = "block"; // Show the image
+        } else {
+            document.getElementById("nickname").textContent = "User not found!";
+            document.getElementById("avatar").style.display = "none"; // Hide image
+        }
+    })
+    .catch(error => {
+        console.error("Error:", error);
+        document.getElementById("nickname").textContent = "Error fetching data!";
+        document.getElementById("avatar").style.display = "none"; // Hide image
+    });
 };
