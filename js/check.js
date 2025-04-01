@@ -1,10 +1,8 @@
-function runScript() {
+window.runScript = function() {  // Attach function to global window object
     let inputValue = document.getElementById("userInput").value;
     
-    // Example: Using input value in your existing script
     console.log("User Input:", inputValue);
 
-    // Add your existing script logic here
     let id = inputValue;  // Assuming you use input as `id`
     let time = Date.now();
     let secret = 'tB87#kPtkxqOS2'; // Replace with actual secret
@@ -23,4 +21,4 @@ function runScript() {
     .then(response => response.json())
     .then(data => console.log("Response:", data))
     .catch(error => console.error("Error:", error));
-}
+};
