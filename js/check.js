@@ -20,31 +20,29 @@ window.runScript = function() {  // Attach function to global window object
     })
     .then(response => response.json())
     .then(data => {
-        console.log("Full Response:", data); // Log full response for debugging
+        console.log("Full Response:", data); // Log full response
 
-        if (data && data.data) {
-            let avatarUrl = data.data.avatar_image; 
-            let nickname = data.data.nickname;
+        // Ensure we have a valid response structure
+        if (data.code === 0 && data.data) {
+            let avatarUrl = data.data.avatar_image || ""; // Default empty if missing
+            let nickname = data.data.nickname || "Unknown Player"; // Default text if missing
 
             console.log("Avatar URL:", avatarUrl);
             console.log("Nickname:", nickname);
 
+            // Update nickname
+            document.getElementById("nickname").textContent = nickname;
+
+            // Update avatar image only if a valid URL exists
             if (avatarUrl) {
                 document.getElementById("avatar").src = avatarUrl;
                 document.getElementById("avatar").style.display = "block";
             } else {
-                console.warn("Avatar URL is missing in response!");
+                console.warn("No avatar found.");
                 document.getElementById("avatar").style.display = "none";
             }
-
-            if (nickname) {
-                document.getElementById("nickname").textContent = nickname;
-            } else {
-                console.warn("Nickname is missing in response!");
-                document.getElementById("nickname").textContent = "No nickname found";
-            }
         } else {
-            console.error("No 'data' field in response!");
+            console.error("Unexpected response format or user not found.");
             document.getElementById("nickname").textContent = "User not found!";
             document.getElementById("avatar").style.display = "none";
         }
