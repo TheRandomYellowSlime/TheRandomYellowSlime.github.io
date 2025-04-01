@@ -32,7 +32,7 @@ function login() {
         return;
     }
 
-    let secret = 'tB87#kPtkxqOS2';
+    let secret = 'xxxxxxxxx'; // change later
     let time = Date.now();
     
     let form = `fid=${inputValue}&time=${time}`;
