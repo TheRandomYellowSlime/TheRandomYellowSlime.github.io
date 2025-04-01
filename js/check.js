@@ -1,9 +1,11 @@
-const REQUIRED_KID = "1958"; // Example constant to check if user has access
+let currentKid = null;
+
+const REQUIRED_KID = 1958; // Example constant to check if user has access
 
 // Check if the user is already logged in on page load
 window.onload = function() {
-    const storedKid = localStorage.getItem('kid');  // Retrieve kid from localStorage
-    if (storedKid === REQUIRED_KID) {
+    // Check if currentKid exists (set when logging in)
+    if (currentKid === REQUIRED_KID) {
         showRestrictedContent();  // Show restricted content if valid
     } else {
         showLoginForm();  // Show login form if no valid kid
@@ -50,7 +52,7 @@ function login() {
             const nickname = data.data.nickname || "Unknown Player";
             
             // Store kid in localStorage (semi-login token)
-            localStorage.setItem('kid', kid);
+            currentKid = kid;
             
             // Show nickname and avatar
             document.getElementById("nickname").textContent = nickname;
@@ -91,7 +93,7 @@ function showLoginForm() {
 
 // Logout function to clear session and go back to login
 function logout() {
-    localStorage.removeItem('kid');  // Remove kid from localStorage
+    currentKid = null;  // Clear the kid from memory
     showLoginForm();  // Show login form again
     document.getElementById("nickname").textContent = "";
     document.getElementById("avatar").style.display = "none";
